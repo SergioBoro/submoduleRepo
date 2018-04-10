@@ -1,0 +1,182 @@
+сен 13, 2017 2:28:51 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Logging initialized @505ms
+сен 13, 2017 2:28:51 PM winstone.Logger logInternal
+INFO: Beginning extraction from war file
+сен 13, 2017 2:28:51 PM org.eclipse.jetty.util.log.JavaUtilLog warn
+WARNING: Empty contextPath
+сен 13, 2017 2:28:51 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: jetty-9.2.z-SNAPSHOT
+сен 13, 2017 2:28:52 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+сен 13, 2017 2:28:52 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Started w.@1ea9ce5{/,file:/D:/Jenkins/war/,AVAILABLE}{D:\Jenkins\war}
+сен 13, 2017 2:28:52 PM org.eclipse.jetty.util.log.JavaUtilLog warn
+WARNING: FAILED ServerConnector@fd07bb{HTTP/1.1}{0.0.0.0:1111}: java.net.BindException: Address already in use: bind
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:321)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:366)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at winstone.Launcher.<init>(Launcher.java:152)
+	at winstone.Launcher.main(Launcher.java:352)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at Main._main(Main.java:264)
+	at Main.main(Main.java:112)
+
+сен 13, 2017 2:28:52 PM org.eclipse.jetty.util.log.JavaUtilLog warn
+WARNING: FAILED org.eclipse.jetty.server.Server@1aa4aaf: java.net.BindException: Address already in use: bind
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:321)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:366)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at winstone.Launcher.<init>(Launcher.java:152)
+	at winstone.Launcher.main(Launcher.java:352)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at Main._main(Main.java:264)
+	at Main.main(Main.java:112)
+
+сен 13, 2017 2:28:52 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Stopped ServerConnector@fd07bb{HTTP/1.1}{0.0.0.0:1111}
+сен 13, 2017 2:28:52 PM hudson.WebAppMain contextDestroyed
+INFO: Shutting down a Jenkins instance that was still starting up
+java.lang.Throwable: reason
+	at hudson.WebAppMain.contextDestroyed(WebAppMain.java:390)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextDestroyed(ContextHandler.java:808)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextDestroyed(ServletContextHandler.java:457)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStop(ContextHandler.java:842)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStop(ServletContextHandler.java:215)
+	at org.eclipse.jetty.webapp.WebAppContext.doStop(WebAppContext.java:529)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:143)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:162)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:73)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:456)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at winstone.Launcher.shutdown(Launcher.java:305)
+	at winstone.Launcher.<init>(Launcher.java:165)
+	at winstone.Launcher.main(Launcher.java:352)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at Main._main(Main.java:264)
+	at Main.main(Main.java:112)
+
+сен 13, 2017 2:28:52 PM org.eclipse.jetty.util.log.JavaUtilLog info
+INFO: Stopped w.@1ea9ce5{/,file:/D:/Jenkins/war/,UNAVAILABLE}{D:\Jenkins\war}
+сен 13, 2017 2:28:52 PM winstone.Logger logInternal
+INFO: Winstone shutdown successfully
+сен 13, 2017 2:28:52 PM winstone.Logger logInternal
+SEVERE: Container startup failed
+java.io.IOException: Failed to start Jetty
+	at winstone.Launcher.<init>(Launcher.java:154)
+	at winstone.Launcher.main(Launcher.java:352)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at Main._main(Main.java:264)
+	at Main.main(Main.java:112)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:321)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:366)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at winstone.Launcher.<init>(Launcher.java:152)
+	... 7 more
+
+сен 13, 2017 2:28:53 PM hudson.util.BootFailure publish
+SEVERE: Failed to initialize Jenkins
+hudson.util.HudsonFailedToLoad: java.lang.InterruptedException
+	at hudson.WebAppMain$3.run(WebAppMain.java:248)
+Caused by: java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:503)
+	at org.jvnet.hudson.reactor.Reactor.execute(Reactor.java:267)
+	at jenkins.InitReactorRunner.run(InitReactorRunner.java:47)
+	at jenkins.model.Jenkins.executeReactor(Jenkins.java:1113)
+	at jenkins.model.Jenkins.<init>(Jenkins.java:929)
+	at hudson.model.Hudson.<init>(Hudson.java:86)
+	at hudson.model.Hudson.<init>(Hudson.java:82)
+	at hudson.WebAppMain$3.run(WebAppMain.java:231)
+
+сен 13, 2017 2:28:53 PM jenkins.model.Jenkins cleanUp
+INFO: Stopping Jenkins
+сен 13, 2017 2:28:53 PM jenkins.model.Jenkins$21 onAttained
+INFO: Started termination
+сен 13, 2017 2:28:53 PM jenkins.model.Jenkins$21 onTaskFailed
+SEVERE: Failed NioChannelSelector.cleanUp
+java.lang.IllegalArgumentException: Unable to inject class jenkins.slaves.NioChannelSelector
+	at hudson.init.TaskMethodFinder.lookUp(TaskMethodFinder.java:125)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:104)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:175)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:282)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:210)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:117)
+	at jenkins.model.Jenkins$20.execute(Jenkins.java:3287)
+	at org.jvnet.hudson.reactor.Reactor$Node.runIfPossible(Reactor.java:139)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:128)
+	at jenkins.model.Jenkins$20.execute(Jenkins.java:3287)
+	at org.jvnet.hudson.reactor.Reactor$Node.runIfPossible(Reactor.java:139)
+	at org.jvnet.hudson.reactor.Reactor.execute(Reactor.java:263)
+	at jenkins.model.Jenkins._cleanUpRunTerminators(Jenkins.java:3284)
+	at jenkins.model.Jenkins.cleanUp(Jenkins.java:3206)
+	at hudson.WebAppMain$3.run(WebAppMain.java:252)
+
+сен 13, 2017 2:28:53 PM jenkins.model.Jenkins$21 onTaskFailed
+SEVERE: Failed IOHubProvider.cleanUp
+java.lang.IllegalArgumentException: Unable to inject class jenkins.slaves.IOHubProvider
+	at hudson.init.TaskMethodFinder.lookUp(TaskMethodFinder.java:125)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:104)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:175)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:282)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:210)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:117)
+	at jenkins.model.Jenkins$20.execute(Jenkins.java:3287)
+	at org.jvnet.hudson.reactor.Reactor$Node.runIfPossible(Reactor.java:139)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:128)
+	at jenkins.model.Jenkins$20.execute(Jenkins.java:3287)
+	at org.jvnet.hudson.reactor.Reactor$Node.runIfPossible(Reactor.java:139)
+	at org.jvnet.hudson.reactor.Reactor.execute(Reactor.java:263)
+	at jenkins.model.Jenkins._cleanUpRunTerminators(Jenkins.java:3284)
+	at jenkins.model.Jenkins.cleanUp(Jenkins.java:3206)
+	at hudson.WebAppMain$3.run(WebAppMain.java:252)
+
+сен 13, 2017 2:28:53 PM jenkins.model.Jenkins$21 onAttained
+INFO: Completed termination
+сен 13, 2017 2:28:53 PM jenkins.model.Jenkins _cleanUpDisconnectComputers
+INFO: Starting node disconnection
+сен 13, 2017 2:28:53 PM jenkins.model.Jenkins _cleanUpShutdownPluginManager
+INFO: Stopping plugin manager
+сен 13, 2017 2:28:53 PM jenkins.model.Jenkins _cleanUpPersistQueue
+INFO: Persisting build queue
+сен 13, 2017 2:28:53 PM jenkins.model.Jenkins cleanUp
+INFO: Jenkins stopped
