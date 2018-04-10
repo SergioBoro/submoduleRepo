@@ -1,0 +1,46 @@
+0. Submodules allow you to keep a Git repository as a subdirectory of another Git repository. 
+This lets you clone another repository into your project and keep your commits separate.
+
+1. git submodule add https://github.com/chaconinc/DbConnector
+
+2. .gitmodules
+
+[submodule "DbConnector"]
+	path = DbConnector
+	url = https://github.com/chaconinc/DbConnector
+
+3. git clone https://github.com/chaconinc/MainProject
+   git submodule init
+   git submodule update
+
+альтернатива:
+   git clone --recurse-submodules https://github.com/chaconinc/MainProject
+
+4. Pulling in Upstream Changes:
+
+   git fetch
+   git merge origin/master
+
+альтернатива:
+   git submodule update --remote DbConnector
+
+альтернатива с новой веткой stable:
+   git config -f .gitmodules submodule.DbConnector.branch stable
+   git submodule update --remote
+
+5. Publishing Submodule Changes:
+
+   git push --recurse-submodules=check
+
+или:
+   git push --recurse-submodules=on-demand
+
+6. Merging Submodule Changes:
+   Diverged history: 
+
+   git pull
+   cd DbConnector
+   git rev-parse HEAD
+   git branch try-merge c771610
+   
+   resolve conflict and commit it   
