@@ -1,0 +1,143 @@
+USE [showcase]
+GO
+/****** Object:  StoredProcedure [dbo].[chart_pas_sergio]    Script Date: 03/23/2017 11:32:00 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+
+ALTER PROCEDURE [dbo].[chart_pas_sergio]
+	@main_context varchar(512) ='Итого по России',
+	@add_context varchar(512) ='',
+	@filterinfo xml='',
+	@session_context xml ='',
+	@element_id varchar(512) ='',	
+	@chartsettings xml output
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	
+Set @main_context='Выборы президента РФ'	
+
+Declare @chartsettings_str as varchar(max)
+if @add_context='' set @add_context=@main_context
+set @chartsettings_str='<chartsettings>
+		<labels>
+			<header><h3>'+@add_context+'</h3></header>
+		</labels>
+		<properties legend="bottom" selectorColumn="Кандидат" width="500px" height="300px" flip="false" hintFormat="%x (%labely): %value"/>
+		<labelsY>
+
+<labelY value="200" text="двести"/>
+
+<labelY value="30" text="тридцать"/>
+</labelsY>
+		<template>
+{
+	"plot": [
+		{
+			"type": "Lines",
+			"tension": "S",
+			"gap": 3,
+			"markers": true,
+			"areas": false
+		},
+		{
+			"type": "Grid",
+			"name": "grid",
+			"renderOnAxis": false,
+			"majorVLine": {
+				"color": {
+					"r": 246,
+					"g": 249,
+					"b": 253,
+					"a": 0.8
+				},
+				"width": 1
+			},
+			"hMajorLines": false,
+			"hFill": {
+				"r": 246,
+				"g": 249,
+				"b": 253,
+				"a": 0.8
+			},
+			"hAlternateFill": {
+				"r": 146,
+				"g": 149,
+				"b": 153,
+				"a": 0.8
+			},
+			"hStripes": true
+		}
+	],
+	"theme": "dojox.charting.themes.ThreeD",
+	"action": [
+		{
+			"type": "dojox.charting.action2d.Shake",
+			"options": {
+				"duration": 500,
+				"easing": "dojo.fx.easing.bounceOut"
+			}
+		},
+		{
+			"type": "dojox.charting.action2d.Tooltip"
+		}
+	],
+	"axisX": {
+		"title": "Ось X",
+		"fixLower": "major",
+		"fixUpper": "major",
+		"minorLabels": false,
+		"microTicks": false,
+		"rotation": -90,
+		"minorTicks": false
+	}
+}		
+	</template>
+		
+		
+		
+		
+<records>
+  <rec>
+  <Кандидат>Путин</Кандидат>
+  <_x003Россия_x0020_>64</_x003Россия_x0020_>
+  <_x003Москва_x0020_>45.5</_x003Москва_x0020_>
+  <_x003Питер_x0020_>57.2</_x003Питер_x0020_>
+ <properties>
+						<color value="#0000FF"/>
+  </properties>
+</rec>
+<rec>
+  <Кандидат>Зюганов</Кандидат>
+  <_x003Россия_x0020_>18.7</_x003Россия_x0020_>
+  <_x003Москва_x0020_>19</_x003Москва_x0020_>
+  <_x003Питер_x0020_>13</_x003Питер_x0020_>
+  <properties>
+						<color value="#8A2BE2"/>
+  </properties>
+</rec>
+<rec>
+  <Кандидат>Прохоров</Кандидат>
+  <_x003Россия_x0020_>7</_x003Россия_x0020_>
+  <_x003Москва_x0020_>20</_x003Москва_x0020_>
+  <_x003Питер_x0020_>15</_x003Питер_x0020_>
+  <properties>
+						<color value="#A52A2A"/>
+  </properties>
+</rec>
+</records>		
+		
+		
+		</chartsettings>' 
+set	@chartsettings=CAST(@chartsettings_str as xml)
+END
